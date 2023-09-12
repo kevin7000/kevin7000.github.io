@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(paisaje.jpg);
+    background-size: cover;
+    background-position-y: bottom;
+}
+
+.container .vapour {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: vapour 10s linear infinite;
+}
+
+@keyframes vapour {
+    0%, 100% {
+        backdrop-filter: blur(0);
+    }
+    50% {
+        backdrop-filter: blur(2px);
+    }
+}
+
+.container h2 {
+    position: absolute;
+    color: #fff;
+    font-size: 125px;
+}
+
+.container i {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    top: -10px;
+    background: #d3d3d3;
+    animation: rain linear infinite;
+}
+
+@keyframes rain {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 100vh;
+    }
+}
